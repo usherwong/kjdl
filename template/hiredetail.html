@@ -1,0 +1,72 @@
+<div class="row">
+  <div class="col-md-4">
+    <h1 class="hire-title">加入我们</h1>
+    <ul class="job-list">
+        <li class="job">
+          <div class="position">
+            <a href="joinus.html" class="click_tracking <% if(id == 'ce'){print('active')} %>">作物编辑改良 (CE)</a>
+          </div>
+        </li>
+        <li class="job">
+          <div class="position">
+            <a href="joinus.html?id=ci" class="click_tracking <% if(id == 'ci'){print('active')} %>">作物育种数字化 (CI)</a>
+          </div>
+        </li>
+        <li class="job">
+          <div class="position">
+            <a href="joinus.html?id=cp" class="click_tracking <% if(id == 'cp'){print('active')} %>">作物育种自动化 (CP)</a>
+          </div>
+        </li>
+    </ul>
+  </div>
+  <div class="col-md-8">
+    <div class="job-content">
+      <h4 class="bold"><%= data.aboutTitle %></h4>
+      <div class="split"><%= data.aboutContet %></div>
+      <h4 class="bold"><%= data.aboutTeck %></h4>
+      <p class="split"><%= data.aboutTeckContent %></p>
+
+      <% if(data.position) { %>
+        <h4 class="bold"><%= data.position %></h4>
+        <p class="split"></p>
+      <% } %>
+
+      <h4 class="bold"><%= data.duty %></h4>
+      <ul class="split">
+      <% if(data.dutyDes && data.dutyDes.length > 0){ %>
+        <% for(var i = 0; i < data.dutyDes.length; i++){ %>
+          <li ><%= data.dutyDes[i] %></li>
+        <% } %>
+      <% } %>
+      </ul>
+
+      <h4 class="bold"><%= data.expeirience %></h4>
+      <ul class="split">
+        <% if(data.expeirienceList && data.expeirienceList.length > 0){ %>
+          <% for(var i = 0; i < data.expeirienceList.length; i++){ %>
+            <li><%= data.expeirienceList[i] %></li>
+          <% } %>
+        <% } %>
+      </ul>
+        
+
+      <h4 class="bold"><%= data.request %></h4>
+      <ul class="split">
+        <% if(data.requestList && data.requestList.length > 0){ %>
+          <% for(var i = 0; i < data.requestList.length; i++){ %>
+            <li><%= data.requestList[i] %></li>
+          <% } %>
+        <% } %>
+      </ul>
+
+      <% if(data.ext) { %>
+        <h4 class="bold"><%= data.ext %></h4>
+        <p class="split"><%= data.extInfo %></p>
+      <% } %>
+
+      <h4 class="bold"><%= data.addr %></h4>
+      <h4 class="bold"><%= data.contact %></h4>
+      <p class="split">&nbsp;</p>
+    </div>
+  </div>
+</div>

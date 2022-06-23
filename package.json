@@ -1,0 +1,20 @@
+{
+    "name": "kjdl_p1_website_theme2",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "less": "lessc --clean-css less/main.less css/style.css"
+    },
+    "author": "wangys",
+    "license": "ISC",
+    "dependencies": {
+        "bootstrap": "^4.5.0",
+        "jquery": "^3.2.1",
+        "underscore": "^1.8.3"
+    },
+    "devDependencies": {
+        "less": "^3.11.1",
+        "less-plugin-clean-css": "^1.5.1"
+    }
+}
